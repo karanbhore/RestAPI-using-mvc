@@ -50,7 +50,7 @@ public class StudentSubjectController {
 
 	}
 	@GetMapping("/students/{id}/subjects/{id}")
-	public List<Subject> getSubjects(@PathVariable("id") int id) {
+	public List<Subject> getSubjectsOfSpecificStudent(@PathVariable("id") int id) {
 		System.out.println("request received to get subject of student of id : " + id);
 
 		List<Subject> retrivedSubject = studentSubjectService.getSubjects(id);
